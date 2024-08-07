@@ -3,6 +3,11 @@ body,
 html {
     background-color: var(--brown);
 }
+body {
+    font-size: 16px;
+    background-color: var(--brown);
+}
+
 .info .action-buttons .btn-78p,
 .info .output {
     background-color: var(--purple);
@@ -40,7 +45,7 @@ html {
 }
 .container {
     height: auto;
-    max-width: 23.4375rem;
+    max-width: 767px;
     width: 100%;
     background-position: top;
     background-size: contain;
@@ -106,7 +111,7 @@ html {
     gap: 0.25rem;
 }
 .info .action-buttons button {
-    width: 8.6875rem;
+    flex: 1;
     height: 3rem;
     font-size: 1.25rem;
     font-weight: 700;
@@ -170,7 +175,7 @@ html {
     line-height: 1.625rem;
     margin-top: 0.75rem;
 }
-@media screen and (min-width: 23.5rem) and (max-width: 48rem) {
+@media (min-width: 768px) and (max-width: 900px) {
     .container {
         max-width: 48rem;
         min-height: 45.4375rem;
@@ -223,7 +228,7 @@ html {
         font-weight: 700;
     }
     .info .action-buttons button {
-        width: 12.25rem;
+        flex: 1;
         height: 3rem;
         font-size: 1.375rem;
         font-weight: 700;
@@ -255,7 +260,7 @@ html {
         margin-top: 2rem;
     }
 }
-@media (min-width: 48.0625rem) {
+@media (min-width: 901px) {
     .container {
         max-width: 90rem;
         min-height: 54.6875rem;
