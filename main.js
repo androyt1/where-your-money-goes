@@ -5,7 +5,7 @@ const infoBox = document.querySelector(".output");
 const triangle = document.querySelector(".triangle");
 
 const output1 = `
-        <p>78p funds life-changing projects</p>
+        <h2>78p funds life-changing projects</h2>
         <p>
             That includes ensuring earthquake survivors like Saleh in Syria have food
             and shelter and empowering the Lihukwa villagers in Zambia.
@@ -13,7 +13,7 @@ const output1 = `
     `;
 
 const output2 = `
-        <p>22p ensures that we can continue to transform lives tomorrow</p>
+        <h2>22p ensures that we can continue to transform lives tomorrow</h2>
         <p>
             That includes fundraising and support costs, which allows us to make sure your donation has a long term impact.
         </p>
