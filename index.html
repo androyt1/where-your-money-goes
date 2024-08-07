@@ -3,36 +3,40 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Where your money goes</title>
+        <title>Where Your Money Goes - Donation Impact</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="container">
-            <div class="info">
-                <h1>Where your money goes</h1>
-                <hr />
+        <main class="container">
+            <section class="info" aria-labelledby="main-heading">
+                <h1 id="main-heading">Where your money goes</h1>
+                <hr aria-hidden="true" />
                 <p>
-                    We&apos;re commited to making sure your donation has the biggest possible impact
-                    for those in greatest need.
+                    We're committed to making sure your donation has the biggest possible impact for
+                    those in greatest need.
                 </p>
-                <span>Select the numbers below to see how every pound you donate is used...</span>
-                <div class="action-buttons">
-                    <button class="btn-78p">78p</button>
-                    <button class="btn-22p">22p</button>
+                <p>
+                    <strong
+                        >Select the numbers below to see how every pound you donate is used:</strong
+                    >
+                </p>
+                <div class="action-buttons" role="group" aria-label="Donation allocation options">
+                    <button class="btn-78p" aria-pressed="true">78p</button>
+                    <button class="btn-22p" aria-pressed="false">22p</button>
                 </div>
 
-                <div class="output">
+                <div class="output" aria-live="polite">
                     <div class="inner">
-                        <p>78p funds life-changing projects</p>
+                        <h2>78p funds life-changing projects</h2>
                         <p>
                             That includes ensuring earthquake survivors like Saleh in Syria have
                             food and shelter and empowering the Lihukwa villagers in Zambia.
                         </p>
                     </div>
-                    <div class="triangle move-left"></div>
+                    <div class="triangle move-left" aria-hidden="true"></div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
         <script src="main.js"></script>
     </body>
 </html>
