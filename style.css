@@ -1,17 +1,3 @@
-.container,
-body,
-html {
-    background-color: var(--brown);
-}
-body {
-    font-size: 16px;
-    background-color: var(--brown);
-}
-
-.info .action-buttons .btn-78p,
-.info .output {
-    background-color: var(--purple);
-}
 * {
     margin: 0;
     padding: 0;
@@ -38,11 +24,23 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+.container,
 body,
 html {
     height: 100%;
+}
+body {
+    font-size: 16px;
+    background-color: var(--brown);
     font-family: FSMeWeb-Regular, sans-serif;
 }
+
+.info .action-buttons .btn-78p,
+.info .output {
+    background-color: var(--purple);
+}
+
 .container {
     height: auto;
     max-width: 767px;
