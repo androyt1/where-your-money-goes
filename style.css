@@ -1,8 +1,11 @@
+/* Reset and box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* CSS Variables */
 :root {
     --brown: #d5995f;
     --white: #ffffff;
@@ -12,136 +15,130 @@
     --purple: #6f3f87;
     --dark: #173145;
 }
+
+/* Font-face declarations */
 @font-face {
-    font-family: FSMeWeb-Bold;
+    font-family: "FSMeWeb-Bold";
     src: url("fonts/FSMeWeb-Bold_ce2eoa.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
+
 @font-face {
-    font-family: FSMeWeb-Regular;
+    font-family: "FSMeWeb-Regular";
     src: url("fonts/FSMeWeb-Regular_rcfffc.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
+}
+
+/* Base styles */
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: "FSMeWeb-Regular", Arial, sans-serif;
+    line-height: 1.5;
+    background-color: var(--brown);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container,
 body,
 html {
-    height: 100%;
-}
-body {
-    font-size: 16px;
-    background-color: var(--brown);
-    font-family: FSMeWeb-Regular, sans-serif;
+    min-height: 100%;
 }
 
-.info .action-buttons .btn-78p,
-.info .output {
-    background-color: var(--purple);
-}
-
+/* Container styles */
 .container {
-    height: auto;
     max-width: 767px;
     width: 100%;
-    background-position: top;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-position: top center;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("/images/mobile/bg.jpg");
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
 }
+
+/* Info section styles */
 .info {
     background-color: var(--white);
     margin-top: 19.1rem;
     width: 87.2%;
-    height: auto;
-    opacity: 0px;
-    margin-bottom: 2.5rem;
     border-radius: 0.625rem;
-    border: 0.0625rem solid var(--light-stroke);
+    border: 1px solid var(--light-stroke);
     padding: 1.4375rem 1.25rem;
+    margin-bottom: 2.5rem;
 }
+
 .info h1 {
-    font-family: "FS Me", sans-serif;
+    font-family: "FSMeWeb-Bold", Arial, sans-serif;
     font-size: 1.875rem;
-    font-weight: 700;
-    line-height: 2.5rem;
-    text-align: left;
-    text-wrap: balance;
-    color: var(--text);
+    line-height: 1.33;
+    margin-bottom: 0.9375rem;
 }
-.info p,
-.info p:nth-child(2) {
-    font-family: "FS Me", sans-serif;
-    font-size: 1rem;
-    text-align: left;
-    color: var(--text);
+
+.info p {
+    margin-bottom: 1.25rem;
 }
+
 .info hr {
     width: 3rem;
     height: 0.25rem;
     background-color: var(--cyan);
-    border: 0.125rem solid var(--light-stroke);
-    margin-top: 0.9375rem;
+    border: none;
+    margin: 0.9375rem 0;
 }
-.info p {
-    margin-top: 2.0625rem;
-    font-weight: 400;
-    line-height: 1.625rem;
-}
-.info p:nth-child(2) {
-    display: block;
-    margin-top: 1.25rem;
-    font-weight: 700;
-    line-height: 1.625rem;
-}
-.info .action-buttons {
+
+/* Button styles */
+.action-buttons {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     gap: 0.25rem;
+    margin-top: 0.875rem;
 }
-.info .action-buttons button {
+
+.action-buttons button {
     flex: 1;
     height: 3rem;
     font-size: 1.25rem;
     font-weight: 700;
-    line-height: 1.625rem;
-    text-align: center;
     color: var(--white);
-    margin-top: 0.875rem;
     border-radius: 0.375rem;
-    border: 0.0625rem solid var(--text);
-    font-family: "FS Me", sans-serif;
+    border: 1px solid var(--text);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.info .output h2,
-.info .output p {
-    font-weight: 700;
-    text-align: left;
-    font-family: "FS Me", sans-serif;
-    color: var(--white);
-}
-.info .action-buttons .btn-22p {
+
+.btn-22p {
     background-color: var(--dark);
 }
-.info .output {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-top: 0.875rem;
-    border-radius: 0.375rem;
-    color: var(--white);
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-bottom: 1.625rem;
+
+.btn-78p {
+    background-color: var(--purple);
 }
+
+/* Output section styles */
+.output {
+    background-color: var(--purple);
+    width: 100%;
+    border-radius: 0.375rem;
+    padding: 1.625rem 1.25rem;
+    margin-top: 0.875rem;
+    position: relative;
+    color: var(--white);
+}
+
 .output .triangle {
     width: 0;
     height: 0;
@@ -150,192 +147,81 @@ body {
     position: absolute;
     top: -0.9375rem;
 }
-.info .output .inner {
-    width: 100%;
-    height: 100%;
-}
+
 .move-right {
     left: 75%;
     border-bottom: 1.25rem solid var(--dark);
 }
+
 .move-left {
     left: 25%;
     border-bottom: 1.25rem solid var(--purple);
 }
-.info .output h2 {
-    padding-top: 1.625rem;
+
+.output h2 {
     font-size: 1.375rem;
-    line-height: 2rem;
+    margin-bottom: 0.75rem;
 }
-.info .output p {
-    padding-top: 0;
-    font-size: 1rem;
-    line-height: 1.625rem;
-    margin-top: 0.75rem;
-}
-@media (min-width: 768px) and (max-width: 900px) {
+
+/* Media Queries */
+@media (min-width: 568px) {
     .container {
-        max-width: 48rem;
-        min-height: 45.4375rem;
-        background-image: url("/images/tablet/bg.jpg");
-        background-size: cover;
-        background-position: center;
-        justify-content: flex-end;
-    }
-    .info {
-        width: 60.4%;
-        max-width: 29rem;
-        min-height: 35.4375rem;
-        margin-top: clamp(1.5rem, 12.5%, 5.6875rem);
-        margin-right: clamp(1rem, 3.125%, 1.5rem);
-        height: auto;
-    }
-    .info h1 {
-        font-family: "FS Me", sans-serif;
-        font-size: 1.875rem;
-        font-weight: 700;
-        line-height: 2.5rem;
-        text-align: left;
-        color: var(--text);
-    }
-    .info p,
-    .info p:nth-child(2) {
-        font-family: "FS Me", sans-serif;
-        font-size: 1rem;
-        line-height: 1.625rem;
-        text-align: left;
-        color: var(--text);
-    }
-    .info hr {
-        width: 3rem;
-        height: 0.25rem;
-        margin-top: 1rem;
-        background-color: var(--cyan);
-        border: 0.0625rem solid var(--light-stroke);
-    }
-    .info .action-buttons,
-    .info p {
-        margin-top: 1.5rem;
-    }
-    .info p {
-        font-weight: 400;
-    }
-    .info p:nth-child(2) {
-        display: block;
-        margin-top: 1.375rem;
-        font-weight: 700;
-    }
-    .info .action-buttons button {
-        flex: 1;
-        height: 3rem;
-        font-size: 1.375rem;
-        font-weight: 700;
-        line-height: 2rem;
-        text-align: center;
-        font-family: "FS Me", sans-serif;
-    }
-    .info .output h2,
-    .info .output p {
-        font-family: "FS Me", sans-serif;
-        font-weight: 700;
-        text-align: left;
-        color: var(--white);
-    }
-    .info .output {
+        min-height: 100vh;
         width: 100%;
         height: auto;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
+        background-image: url("/images/tablet/bg.jpg");
+        background-size: cover;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 0;
     }
-    .info .output h2 {
-        padding-top: 2rem;
-        font-size: 1.375rem;
-        line-height: 2rem;
-    }
-    .info .output p {
-        font-size: 1rem;
-        line-height: 1.625rem;
-        margin-top: 2rem;
+
+    .info {
+        width: 60.4%;
+        margin: 5.6875rem 1.5rem 0 0;
     }
 }
+
 @media (min-width: 901px) {
     .container {
         max-width: 90rem;
-        min-height: 54.6875rem;
         background-image: url("/images/desktop/bg.jpg");
-        background-size: cover;
-        background-position: center;
-        justify-content: flex-end;
+        padding-bottom: 4rem;
     }
+
     .info {
         width: 43.33%;
         max-width: 39rem;
-        min-height: 42.6875rem;
-        margin-top: 6rem;
-        margin-right: 5rem;
-        border-radius: 0.625rem;
-        overflow-y: auto;
+        margin: 6rem 5rem 0 0;
         padding: 3rem 3.5rem;
     }
+
     .info h1 {
         font-size: 2.5rem;
-        line-height: 3.25rem;
-        font-family: "FS Me", sans-serif;
-        color: var(--text);
+        line-height: 1.3;
     }
-    .info p,
-    .info p:nth-child(2) {
-        font-size: 1.25rem;
-        line-height: 1.875rem;
-        text-align: left;
-        color: var(--text);
-        font-family: "FS Me", sans-serif;
-    }
-    .info hr {
-        width: 4rem;
-        height: 0.375rem;
-        margin-top: 0.75rem;
-    }
+
     .info p {
-        margin-top: 2.5rem;
-        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.5;
     }
-    .info p:nth-child(2) {
-        font-weight: 700;
-    }
-    .info .action-buttons {
-        margin-top: 2rem;
-    }
-    .info .action-buttons button {
-        width: 15.75rem;
+
+    .action-buttons button {
         height: 4rem;
-        font-family: "FS Me", sans-serif;
         font-size: 1.625rem;
-        font-weight: 700;
-        line-height: 1.625rem;
-        text-align: center;
     }
-    .info .output h2,
-    .info .output p {
-        font-family: "FS Me", sans-serif;
-        font-weight: 700;
-        text-align: left;
-        color: var(--white);
+
+    .output {
+        padding: 2rem;
     }
-    .info .output {
-        width: 100%;
-        height: auto;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-    .info .output h2 {
-        padding-top: 2rem;
+
+    .output h2 {
         font-size: 1.375rem;
-        line-height: 2rem;
     }
-    .info .output p {
+
+    .output p {
         font-size: 1.125rem;
-        line-height: 1.75rem;
-        margin-top: 1rem;
+        line-height: 1.55;
     }
 }
